@@ -146,11 +146,11 @@ CXXFLAGS = $(CFLAGS) -fno-exceptions
 # libraries
 ifdef PREFIX
 LIBS = -lc -lm -lnosys -lmath
-LIBDIR = ./../
+LIBDIR = -L./../
 LDFLAGS = $(MCU) -specs=nano.specs -specs=nosys.specs $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 else
 LIBS = -lc -lm -lmath
-LIBDIR = ./../
+LIBDIR = -L./../
 LDFLAGS = $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 endif
 

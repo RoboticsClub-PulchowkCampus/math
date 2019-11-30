@@ -9,7 +9,9 @@ before_install:
   - echo Starting Build Process
 
 script:
+  # Configure first. Create required static library
   - if [ $TRAVIS_OS_NAME == linux ]; then bash ./configure.sh; fi
+  # Finally run all the tests
   - cd ./Tests
   - make run_test
   - cd ..

@@ -153,7 +153,8 @@ LDFLAGS = $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-
 endif
 
 # default action: create test executable
-all: $(TARGET).a
+LIB_TARGET = lib$(TARGET).a
+all: $(LIB_TARGET)
 
 
 #######################################
@@ -184,9 +185,9 @@ $(BUILD_DIR)/%.o: %.cpp Makefile | $(BUILD_DIR)
 
 ##
 
-$(TARGET).a: $(OBJECTS) Makefile
+$(LIB_TARGET): $(OBJECTS) Makefile
 	$(AR) rcs $@ $(OBJECTS)
-#	$(SZ) $@
+	echo Library Created Successfully
 	
 	
 $(BUILD_DIR):
