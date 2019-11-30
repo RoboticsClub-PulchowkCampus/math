@@ -195,7 +195,7 @@ $(BUILD_DIR):
 	mkdir $@
 
 # Run the tests
-run: all
+run_test: all
 	./$(BUILD_DIR)/$(TARGET)
 
 #######################################

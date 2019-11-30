@@ -6,11 +6,11 @@ compiler:
 os: linux
 
 before_install:
-  - gcc -v
-  - if [ $TRAVIS_OS_NAME == linux ]; then echo Running on Linux; fi
+  - echo Starting Build Process
 
 script:
   - if [ $TRAVIS_OS_NAME == linux ]; then ./configure.sh; fi
+  - cd ./Tests; make run_test; cd ..
 
 notifications:
   email: false
