@@ -6,4 +6,4 @@ make
 cd Tests/
 
 # Build the test and run it
-make run_test
+make tests

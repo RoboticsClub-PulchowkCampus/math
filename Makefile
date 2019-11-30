@@ -187,21 +187,21 @@ $(BUILD_DIR)/%.o: %.cpp Makefile | $(BUILD_DIR)
 
 $(LIB_TARGET): $(OBJECTS) Makefile
 	$(AR) rcs $@ $(OBJECTS)
-	echo Library Created Successfully
+	@echo Library Created Successfully
 	
 	
 $(BUILD_DIR):
 	mkdir $@
-
-test:
-	cd Tests; make run; cd ..
 #######################################
 # clean up
 #######################################
 clean:
-	del /s/q $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)
+	rm -rf $(LIB_TARGET)
+	@echo Everything Cleaned up
 
 rebuild: clean all
+	@echo Rebuild Succeeded
 #######################################
 # dependencies
 #######################################

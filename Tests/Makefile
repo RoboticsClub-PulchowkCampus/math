@@ -188,22 +188,26 @@ $(BUILD_DIR)/%.o: %.cpp Makefile | $(BUILD_DIR)
 $(BUILD_DIR)/$(TARGET): $(OBJECTS) Makefile
 	$(CXX) $(OBJECTS) $(LDFLAGS) -o $@
 	$(SZ) $@
+	@echo Tests Executable Created Successfully
 	
 	
 $(BUILD_DIR):
 	mkdir $@
 
 # Run the tests
-run_test: all
+tests: all
 	./$(BUILD_DIR)/$(TARGET)
+	@echo All tests ran successfully
 
 #######################################
 # clean up
 #######################################
 clean:
-	del /s/q $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)
+	@echo Everything Cleaned up
 
 rebuild: clean all
+	@echo Rebuild Succeeded
 #######################################
 # dependencies
 #######################################
