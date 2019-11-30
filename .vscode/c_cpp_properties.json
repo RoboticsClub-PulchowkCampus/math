@@ -1,0 +1,15 @@
+{
+        "configurations": [
+                {
+                        "name": "Math Library",
+                        "includePath": [
+                                "${workspaceRoot}",
+                                "${workspaceRoot}/Core/integrator",
+
+                                "${workspaceRoot}/Tests"
+                        ],
+                        "intelliSenseMode": "msvc-x64"
+                }
+        ],
+        "version": 4
+}
