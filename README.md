@@ -8,6 +8,6 @@ Following functions are currently supported:
 
 * Integrator:
   * Algorithms supported:
-    * [Trapezoidal](https://en.wikipedia.org/wiki/Trapezoidal_rule)
+    * [Trapezoidal Rule](https://en.wikipedia.org/wiki/Trapezoidal_rule)
   * Examples
-    * [trapezoidal](Tests/integrator/trapezoidal_test.cpp)
+    * [Trapezoidal](Tests/integrator/trapezoidal_test.cpp)
