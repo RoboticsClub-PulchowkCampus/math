@@ -10,7 +10,7 @@ before_install:
 
 script:
   - if [ $TRAVIS_OS_NAME == linux ]; then bash ./configure.sh; fi
-  - cd ./Tests; make run_test; cd ..
+  - cd ./Tests; make; ./Build/tests; cd ..
 
 notifications:
   email: false
