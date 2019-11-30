@@ -149,8 +149,8 @@ LIBS = -lc -lm -lnosys -lmath
 LIBDIR = ./../
 LDFLAGS = $(MCU) -specs=nano.specs -specs=nosys.specs $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 else
-LIBS = -lc -lm
-LIBDIR = 
+LIBS = -lc -lm -lmath
+LIBDIR = ./../
 LDFLAGS = $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 endif
 
