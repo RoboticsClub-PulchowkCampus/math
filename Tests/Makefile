@@ -46,6 +46,7 @@ ASM_SOURCES =  \
 CXX_SOURCES = \
 main_test.cpp \
 integrator/integrator_test.cpp \
+integrator/trapezoidal_test.cpp \
 
 ##
 #######################################
@@ -117,9 +118,7 @@ AS_INCLUDES =  \
 # C includes
 C_INCLUDES =  \
 -I../Core/integrator \
--I. \
--Icatch2
-
+-I.
 
 
 # compile gcc flags
