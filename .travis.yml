@@ -1,0 +1,18 @@
+language: cpp
+sudo: required
+dist: bionic
+compiler:
+  -gcc
+os:
+  -linux
+ruby: 2.2.0
+
+before_install:
+  - gcc -v
+  - if [ $TRAVIS_OS_NAME == linux ]; then echo Running on Linux; fi
+
+script:
+  - if [ $TRAVIS_OS_NAME == linux ]; then ./configure; fi
+
+notifications:
+  email: false
