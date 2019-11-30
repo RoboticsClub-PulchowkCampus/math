@@ -6,8 +6,8 @@ A library that contains some essential math functions implementations.
 
 Following functions are currently supported:
 
-        * Integrator:
-          * Algorithms supported:
-            * Trapezoidal
-          * Examples
-            * [trapezoidal](Tests/integrator/trapezoidal_test.cpp)
+* Integrator:
+  * Algorithms supported:
+    * Trapezoidal
+  * Examples
+    * [trapezoidal](Tests/integrator/trapezoidal_test.cpp)
