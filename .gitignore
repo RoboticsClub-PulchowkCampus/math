@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Ignore all files in a build folder
+*/Build/
