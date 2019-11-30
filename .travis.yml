@@ -9,7 +9,7 @@ before_install:
   - echo Starting Build Process
 
 script:
-  - if [ $TRAVIS_OS_NAME == linux ]; then ./configure.sh; fi
+  - if [ $TRAVIS_OS_NAME == linux ]; then bash ./configure.sh; fi
   - cd ./Tests; make run_test; cd ..
 
 notifications:
