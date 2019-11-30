@@ -1,8 +1,8 @@
 #include "trapezoidal.h"
 
-Trapezoidal::Trapezoidal(float initialValue) {
+Trapezoidal::Trapezoidal(float initialValue, float intValue) {
         lastValue_ = initialValue;
-        value_ = 0;
+        value_ = intValue;
 }
 
 float Trapezoidal::integrate(float dx, float y) {

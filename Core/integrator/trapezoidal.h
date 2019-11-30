@@ -6,14 +6,14 @@
 class Trapezoidal : public Integration_Algorithm
 {
 public:
-        Trapezoidal() = default;
+        Trapezoidal():Trapezoidal(0.0, 0.0) { }
         Trapezoidal(Trapezoidal &&) = default;
         Trapezoidal(const Trapezoidal &) = default;
         Trapezoidal &operator=(Trapezoidal &&) = default;
         Trapezoidal &operator=(const Trapezoidal &) = default;
         ~Trapezoidal() { }
 
-        Trapezoidal(float initialValue);
+        Trapezoidal(float initialValue, float intValue = 0.0);
 
         float integrate(float dx, float y);
 

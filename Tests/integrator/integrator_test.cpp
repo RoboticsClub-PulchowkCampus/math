@@ -3,6 +3,8 @@
 
 #include "catch2/catch.hpp"
 
+#include "utils/utils.h"
+
 class dummyAlgo: public Integration_Algorithm
 {
 public:
@@ -17,11 +19,6 @@ public:
                 return dx*y;
         } 
 };
-
-template<typename T, size_t N>
-constexpr size_t len(T (&arr)[N]) {
-        return N;
-}
 
 TEST_CASE("Testing Integrator class", "[integration]") {
 
