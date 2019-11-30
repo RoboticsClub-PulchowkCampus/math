@@ -33,6 +33,6 @@ TEST_CASE("Testing Integrator class", "[integration]") {
 
         for (size_t i = 0; i < len(vals); ++i) {
                 float v = sum.integrate(i, vals[i]);
-                REQUIRE_THAT(v, Catch::Matchers::WithinRel(i*vals[i] + 30));
+                REQUIRE_THAT(v, Catch::Matchers::WithinRel(i*vals[i]));
         }
 }
