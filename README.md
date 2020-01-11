@@ -11,3 +11,6 @@ Following functions are currently supported:
     * [Trapezoidal Rule](https://en.wikipedia.org/wiki/Trapezoidal_rule)
   * Examples
     * [Trapezoidal](Tests/integrator/trapezoidal_test.cpp)
+
+Visit [Robotics Club - math Github Page](https://roboticsclub-pulchowkcampus.github.io/math/)
+for more info.
