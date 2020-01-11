@@ -1,26 +1,36 @@
-#include "integrator.h"
+/*
+ * integrator_test.cpp
+ * 
+ * Created: 12/3/2019
+ *  Author: n-is
+ *   Email: 073bex422.nischal@pcampus.edu.np
+ */
+
 #include "intalgo.h"
+#include "integrator.h"
 
 #include "catch2/catch.hpp"
 
 #include "utils/utils.h"
 
-class dummyAlgo: public Integration_Algorithm
+class dummyAlgo : public Integration_Algorithm
 {
 public:
-        dummyAlgo() { }
+        dummyAlgo() {}
         dummyAlgo(dummyAlgo &&) = default;
         dummyAlgo(const dummyAlgo &) = default;
         dummyAlgo &operator=(dummyAlgo &&) = default;
         dummyAlgo &operator=(const dummyAlgo &) = default;
-        ~dummyAlgo() { }
+        ~dummyAlgo() {}
 
-        float integrate(float dx, float y) {
-                return dx*y;
-        } 
+        float integrate(float dx, float y)
+        {
+                return dx * y;
+        }
 };
 
-TEST_CASE("Testing Integrator class", "[integration]") {
+TEST_CASE("Testing Integrator class", "[integration]")
+{
 
         dummyAlgo dum;
 
@@ -28,8 +38,9 @@ TEST_CASE("Testing Integrator class", "[integration]") {
 
         float vals[] = {1.1, 1.2, 1.3, 1.4};
 
-        for (size_t i = 0; i < len(vals); ++i) {
+        for (size_t i = 0; i < len(vals); ++i)
+        {
                 float v = sum.integrate(i, vals[i]);
-                REQUIRE_THAT(v, Catch::Matchers::WithinRel(i*vals[i]));
+                REQUIRE_THAT(v, Catch::Matchers::WithinRel(i * vals[i]));
         }
 }

@@ -1,3 +1,11 @@
+/*
+ * intalgo.h
+ * 
+ * Created: 12/3/2019
+ *  Author: n-is
+ *   Email: 073bex422.nischal@pcampus.edu.np
+ */
+
 #ifndef _INT_ALGO_H_
 #define _INT_ALGO_H_
 
@@ -6,8 +14,8 @@
 class Integration_Algorithm
 {
 public:
-        Integration_Algorithm() { }
-        virtual ~Integration_Algorithm() { }
+        Integration_Algorithm() {}
+        virtual ~Integration_Algorithm() {}
 
         virtual float integrate(float dx, float y) = 0;
 };
